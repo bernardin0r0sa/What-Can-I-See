@@ -1,0 +1,44 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.letstalkandcode.whatcanisee",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "monolith",
+    "baseName": "WhatCanISee",
+    "packageName": "com.letstalkandcode.whatcanisee",
+    "packageFolder": "com/letstalkandcode/whatcanisee",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZmIwNDJjNTNkN2NmZGEwNjUyN2FhZDM5MTA5ZjBmZTcyNGVkZjEyMTg2NTQ3YTg4ZTllZjhkYTNlN2MxNTk5YTcwY2ZlMGU1ZDk0N2MyZmFkMzU3MjFjODZlNDk3MzhmODg5NTIxZjMxZDEzMDRkMzYyODg1M2EwYzJmMzU4Y2E=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "lux",
+    "clientThemeVariant": "primary",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "pt-pt"
+    ],
+    "skipUserManagement": true
+  }
+}
