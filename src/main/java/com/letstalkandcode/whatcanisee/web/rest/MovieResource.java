@@ -27,7 +27,6 @@ public class MovieResource {
     public MovieResource(ApplicationProperties applicationProperties){
         movieAPI = applicationProperties.getMovieAPI();
         uri = "https://"+movieAPI.getBasepath()+"/movie";
-        System.out.println("HERE----:"+uri);
     }
 
 

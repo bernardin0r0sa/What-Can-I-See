@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
-
 import { LoginModalService, AccountService, Account } from 'app/core';
 
 @Component({
@@ -9,14 +8,15 @@ import { LoginModalService, AccountService, Account } from 'app/core';
   templateUrl: './home.component.html',
   styleUrls: ['home.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   account: Account;
   modalRef: NgbModalRef;
 
   constructor(
     private accountService: AccountService,
     private loginModalService: LoginModalService,
-    private eventManager: JhiEventManager
+    private eventManager: JhiEventManager,
+    private render: Renderer2
   ) {}
 
   ngOnInit() {
@@ -24,6 +24,11 @@ export class HomeComponent implements OnInit {
       this.account = account;
     });
     this.registerAuthenticationSuccess();
+    this.render.addClass(document.body, 'home');
+  }
+
+  ngOnDestroy() {
+    this.render.removeClass(document.body, 'home');
   }
 
   registerAuthenticationSuccess() {

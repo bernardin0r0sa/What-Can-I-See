@@ -19,6 +19,10 @@ import { WhatCanISeeEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
+import { MovieComponent } from './movie/movie.component';
+import { TvComponent } from './tv/tv.component';
+
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   imports: [
@@ -36,9 +40,10 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
     WhatCanISeeHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     WhatCanISeeEntityModule,
-    WhatCanISeeAppRoutingModule
+    WhatCanISeeAppRoutingModule,
+    InfiniteScrollModule
   ],
-  declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+  declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent, MovieComponent, TvComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
