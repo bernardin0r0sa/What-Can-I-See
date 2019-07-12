@@ -1,0 +1,35 @@
+<div *ngIf="!updatingMovies" class="row">
+    <div class="col-md-12">
+            <div *ngIf="hasSelectedMovie" class="row selected" [ngStyle]="setSelectedMovieStyle()">
+                <div class="row">
+                </div>
+                <div class="row" id="moveTop">
+                    <div class="col-md-4">
+                        <img class="card-img-top" src={{poster_path}}{{selectedMovie.poster_path}} alt="Card image cap">
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="card-title commonText selectdTitle">{{selectedMovie.original_title}}</h5>
+                        <p class="card-text commonText">{{selectedMovie.overview}}</p>
+                        <p *ngFor="let genre of selectedMovie.genres" class="card-text genres commonText">{{genre}} | </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="row">
+                <div><h5 class="title">Movies</h5></div>
+                <div class="card-deck w-100 d-none d-md-block d-lg-none"
+                infiniteScroll
+                [infiniteScrollDistance]="2"
+                [infiniteScrollThrottle]="50"
+                (scrolled)="onScroll()">
+                    <div *ngFor="let movie of movies" class="card selectCard"  (click)="selectMovie(movie)">
+                      <img class="card-img-top" src={{poster_path}}{{movie.poster_path}} alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">{{movie.original_title}}</h5>
+                        <p class="card-text">Score:{{movie.vote_average}}</p>
+                        <p *ngFor="let genre of movie.genres" class="card-text genres">{{genre}} |</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+</div>

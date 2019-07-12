@@ -1,0 +1,35 @@
+<div *ngIf="!updatingTvs" class="row">
+    <div class="col-md-12">
+            <div *ngIf="hasSelectedTv" class="row selected" [ngStyle]="setSelectedTvStyle()">
+                <div class="row">
+                </div>
+                <div class="row" id="moveTop">
+                    <div class="col-md-4">
+                        <img class="card-img-top" src={{poster_path}}{{selectedTv.poster_path}} alt="Card image cap">
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="card-title commonText selectdTitle">{{selectedTv.original_name}}</h5>
+                        <p class="card-text commonText">{{selectedTv.overview}}</p>
+                        <p *ngFor="let genre of selectedTv.genres" class="card-text genres commonText">{{genre}} | </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="row">
+                <div><h5 class="title">Tv Show</h5></div>
+                <div class="card-deck w-100 d-none d-md-block d-lg-none"
+                infiniteScroll
+                [infiniteScrollDistance]="2"
+                [infiniteScrollThrottle]="50"
+                (scrolled)="onScroll()">
+                    <div *ngFor="let Tv of Tvs" class="card selectCard"  (click)="selectTv(Tv)">
+                      <img class="card-img-top" src={{poster_path}}{{Tv.poster_path}} alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">{{Tv.original_name}}</h5>
+                        <p class="card-text">Score:{{Tv.vote_average}}</p>
+                        <p *ngFor="let genre of Tv.genres" class="card-text genres">{{genre}} |</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+</div>
