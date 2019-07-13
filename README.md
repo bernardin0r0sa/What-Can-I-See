@@ -2,6 +2,8 @@
 
 This is a web application with all the movies playing on theater and tv shows on air.
 
+Built with JHipster.
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
