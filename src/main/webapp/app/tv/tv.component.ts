@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TvService } from './Tv.service';
+import { TvService } from './tv.service';
 import { POSTER_PATH } from 'app/shared';
 import { BACKDROP_PATH } from 'app/shared';
 import { BACKGROUND_LARGE_IMAGE_PATH } from 'app/shared';

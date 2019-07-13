@@ -5,7 +5,6 @@ import { WhatCanISeeSharedModule } from 'app/shared';
 import { HOME_ROUTE, HomeComponent } from './';
 import { GenreTranslator } from 'app/shared/util/genre-translator';
 
-
 @NgModule({
   imports: [WhatCanISeeSharedModule, RouterModule.forChild([HOME_ROUTE])],
   declarations: [HomeComponent],

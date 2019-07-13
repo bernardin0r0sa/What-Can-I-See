@@ -5,7 +5,7 @@ import { movieRoute } from './movie/movie.route';
 import { tvRoute } from './tv/tv.route';
 import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 
-const LAYOUT_ROUTES = [tvRoute,movieRoute,navbarRoute, ...errorRoute];
+const LAYOUT_ROUTES = [tvRoute, movieRoute, navbarRoute, ...errorRoute];
 
 @NgModule({
   imports: [
