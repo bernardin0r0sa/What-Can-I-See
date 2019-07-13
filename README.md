@@ -1,6 +1,6 @@
 # WhatCanISee
 
-This application was generated using JHipster 6.1.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.1.2](https://www.jhipster.tech/documentation-archive/v6.1.2).
+This is a web application with all the movies playing on theater and tv shows on air.
 
 ## Development
 
